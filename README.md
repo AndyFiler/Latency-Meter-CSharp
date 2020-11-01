@@ -9,7 +9,7 @@ So... This is my First C# code, pls be gentle. There is so much garbage and usel
 
 Arduino Pin configuration should as follows:
 
-<img align="left" width="100" height="100" src="media/LightsensorLatencyMeter.png?raw=true">
+![Arduino Circuit](media/LightsensorLatencyMeter.png?raw=true "Title")
 
 <b>Light_Sensor - A0, </br></b>
 <b>Button - 2 </b>
