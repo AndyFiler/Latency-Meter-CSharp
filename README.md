@@ -4,7 +4,7 @@ This program lets you measure latency of your system given that you have arduino
 <h3>It requires arduino running code from \Arduino\SystemLatencyMeter\SystemLatencyMeter.ino</h3>
 
 
-So... This is my First C# code, pls be gentle. There is so much garbage and useless code that is perhaps slowing evrything down that It's unbelivable but that's why I put it on Git, to solve those issues with the help of this amazing community!
+So... This is my First C# code, pls be gentle. There is so much garbage and useless code that is perhaps slowing everything down that It's unbelivable but that's why I put it on Git, to solve those issues with the help of this amazing community!
 
 
 Arduino Pin configuration should as follows:
