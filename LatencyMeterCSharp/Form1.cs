@@ -28,6 +28,12 @@ namespace GameIntegratedLatencyMeter
             InitializeComponent();
         }
 
+        Stopwatch Pingsw;
+        List<int> SysLatData = new List<int>();
+        List<int> MouseLatData = new List<int>();
+        List<int> PCLatData = new List<int>();
+        LatencyMeterCSharp.IntegratedForm IntegratedFrm;
+
         public class MouseOperations
         {
             [Flags]
@@ -127,10 +133,27 @@ namespace GameIntegratedLatencyMeter
                 return MouseLatData.Last();
         }
 
-        Stopwatch Pingsw;
-        List<int> SysLatData = new List<int>();
-        List<int> MouseLatData = new List<int>();
-        List<int> PCLatData = new List<int>();
+        public bool IsFormLoaded(Form SomeForm)
+        {
+            FormCollection fc = Application.OpenForms;
+
+            foreach (Form frm in fc)
+            {
+                if (frm == SomeForm)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void UpdateIntegration()
+        {
+            if (IsFormLoaded(IntegratedFrm))
+            {
+                IntegratedFrm.UpdateData();
+            }
+        }
 
         private void RunService(object sender, EventArgs e)
         {
@@ -190,6 +213,7 @@ namespace GameIntegratedLatencyMeter
                 MouseLat.Text = ts.Milliseconds.ToString() + "ms";
                 MinMouseLat.Text = MouseLatData.Min().ToString() + "ms";
                 AvgMouseLat.Text = ((float)MouseLatData.Sum() / (float)MouseLatData.Count()).ToString("F") + "ms";
+                UpdateIntegration();
             }
             else
             {
@@ -208,6 +232,7 @@ namespace GameIntegratedLatencyMeter
                     if (!IntegratedCheck.Checked)
                         DetectionZone.BackColor = Color.Black;
                     CheckMouseLat();
+                    UpdateIntegration();
                 }
             }
         }
@@ -226,6 +251,7 @@ namespace GameIntegratedLatencyMeter
             PCLat.Text = "0ms";
             MinPCLat.Text = "0ms";
             AvgPCLat.Text = "0ms";
+            UpdateIntegration();
         }
 
         private void StopService(object sender, EventArgs e)
@@ -235,10 +261,11 @@ namespace GameIntegratedLatencyMeter
 
         private void SaveCurrent(object sender, EventArgs e)
         {
-            SavesPanel.RowCount++;
+            //SavesPanel.RowCount++;
             Label NameLab = new Label();
             NameLab.Text = SaveNameBox.Text;
-            //NameLab.Anchor = (AnchorStyles.Right | AnchorStyles.Left);
+            //NameLab.AutoSize = true;
+            //NameLab.MinimumSize = new Size(10, 10);
             Label SysAvgLab = new Label();
             SysAvgLab.Text = AvgSysLat.Text;
             Label MouseAvgLab = new Label();
@@ -293,6 +320,8 @@ namespace GameIntegratedLatencyMeter
                     }
                     Label NewLineLabel = new Label();
                     NewLineLabel.Text = line;
+                    //NewLineLabel.AutoSize = true;
+                    //NewLineLabel.MaximumSize = new Size(1000, 18);
                     SavesPanel.Controls.Add(NewLineLabel);
                 }
             }
@@ -358,6 +387,32 @@ namespace GameIntegratedLatencyMeter
                 }
             }
         }
+
+        private void IntegrationChanged(object sender, EventArgs e)
+        {
+            var isIntegrated = (sender as CheckBox).Checked;
+            if (isIntegrated)
+            {
+                if (!IsFormLoaded(IntegratedFrm))
+                {
+                    IntegratedFrm = new LatencyMeterCSharp.IntegratedForm();
+                    Form1.ActiveForm.SendToBack();
+                    IntegratedFrm.Show();
+                }
+            }
+            else
+            {
+                if (IsFormLoaded(IntegratedFrm))
+                {
+                    IntegratedFrm.Close();
+                }
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+}
 

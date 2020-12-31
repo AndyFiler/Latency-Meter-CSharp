@@ -85,6 +85,7 @@
             this.RemoveSavedFile = new System.Windows.Forms.Button();
             this.Import = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -98,6 +99,7 @@
             this.panel10.SuspendLayout();
             this.SavesPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Start
@@ -515,24 +517,27 @@
             // 
             this.SavesPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.SavesPanel.AutoSize = true;
             this.SavesPanel.BackColor = System.Drawing.Color.Gray;
             this.SavesPanel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.SavesPanel.ColumnCount = 4;
-            this.SavesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.10677F));
-            this.SavesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.96441F));
-            this.SavesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.96441F));
-            this.SavesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.96441F));
+            this.SavesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.99653F));
+            this.SavesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.33449F));
+            this.SavesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.33449F));
+            this.SavesPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.33449F));
             this.SavesPanel.Controls.Add(this.label13, 0, 0);
             this.SavesPanel.Controls.Add(this.label9, 3, 0);
             this.SavesPanel.Controls.Add(this.label8, 2, 0);
             this.SavesPanel.Controls.Add(this.label6, 1, 0);
-            this.SavesPanel.Location = new System.Drawing.Point(492, 44);
-            this.SavesPanel.MaximumSize = new System.Drawing.Size(5000, 300);
-            this.SavesPanel.MinimumSize = new System.Drawing.Size(420, 125);
+            this.SavesPanel.Location = new System.Drawing.Point(0, 0);
+            this.SavesPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.SavesPanel.MaximumSize = new System.Drawing.Size(5000, 3000);
+            this.SavesPanel.MinimumSize = new System.Drawing.Size(420, 300);
             this.SavesPanel.Name = "SavesPanel";
             this.SavesPanel.RowCount = 1;
             this.SavesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.SavesPanel.Size = new System.Drawing.Size(500, 300);
+            this.SavesPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 299F));
+            this.SavesPanel.Size = new System.Drawing.Size(491, 300);
             this.SavesPanel.TabIndex = 11;
             // 
             // label13
@@ -547,16 +552,16 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(391, 1);
+            this.label9.Location = new System.Drawing.Point(397, 1);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 13);
+            this.label9.Size = new System.Drawing.Size(64, 26);
             this.label9.TabIndex = 7;
             this.label9.Text = "Min System Latency:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(282, 1);
+            this.label8.Location = new System.Drawing.Point(303, 1);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 26);
             this.label8.TabIndex = 5;
@@ -565,7 +570,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(173, 1);
+            this.label6.Location = new System.Drawing.Point(209, 1);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 26);
             this.label6.TabIndex = 9;
@@ -584,6 +589,7 @@
         "sensor in the place where the pixels will change the most after pressing left mo" +
         "use button (ex. muzzle flash)");
             this.IntegratedCheck.UseVisualStyleBackColor = false;
+            this.IntegratedCheck.CheckStateChanged += new System.EventHandler(this.IntegrationChanged);
             // 
             // DetectionZone
             // 
@@ -591,7 +597,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DetectionZone.AutoSize = true;
             this.DetectionZone.BackColor = System.Drawing.Color.Black;
-            this.DetectionZone.Location = new System.Drawing.Point(22, 416);
+            this.DetectionZone.Location = new System.Drawing.Point(22, 423);
             this.DetectionZone.MaximumSize = new System.Drawing.Size(9700, 500);
             this.DetectionZone.Name = "DetectionZone";
             this.DetectionZone.Size = new System.Drawing.Size(970, 173);
@@ -599,7 +605,7 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.Gray;
             this.tableLayoutPanel2.ColumnCount = 4;
@@ -614,7 +620,8 @@
             this.tableLayoutPanel2.Controls.Add(this.label15, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.RemoveSavedFile, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.Import, 3, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(492, 351);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 312);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.MaximumSize = new System.Drawing.Size(500, 300);
             this.tableLayoutPanel2.MinimumSize = new System.Drawing.Size(350, 20);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -622,7 +629,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(500, 59);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(491, 60);
             this.tableLayoutPanel2.TabIndex = 14;
             // 
             // Export
@@ -632,7 +639,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Export.Location = new System.Drawing.Point(3, 3);
             this.Export.Name = "Export";
-            this.Export.Size = new System.Drawing.Size(119, 23);
+            this.Export.Size = new System.Drawing.Size(116, 24);
             this.Export.TabIndex = 23;
             this.Export.Text = "Export";
             this.Export.UseVisualStyleBackColor = true;
@@ -644,9 +651,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FileCB.FormattingEnabled = true;
-            this.FileCB.Location = new System.Drawing.Point(253, 32);
+            this.FileCB.Location = new System.Drawing.Point(247, 33);
             this.FileCB.Name = "FileCB";
-            this.FileCB.Size = new System.Drawing.Size(119, 21);
+            this.FileCB.Size = new System.Drawing.Size(116, 21);
             this.FileCB.TabIndex = 22;
             this.FileCB.DropDown += new System.EventHandler(this.UpdateFiles);
             // 
@@ -657,18 +664,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ExportName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
             this.ExportName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ExportName.Location = new System.Drawing.Point(128, 32);
+            this.ExportName.Location = new System.Drawing.Point(125, 33);
             this.ExportName.Name = "ExportName";
-            this.ExportName.Size = new System.Drawing.Size(119, 20);
+            this.ExportName.Size = new System.Drawing.Size(116, 20);
             this.ExportName.TabIndex = 24;
             // 
             // label16
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.BackColor = System.Drawing.Color.Gray;
-            this.label16.Location = new System.Drawing.Point(253, 0);
+            this.label16.Location = new System.Drawing.Point(247, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(119, 15);
+            this.label16.Size = new System.Drawing.Size(116, 15);
             this.label16.TabIndex = 21;
             this.label16.Text = "Select File:";
             // 
@@ -676,9 +683,9 @@
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label15.BackColor = System.Drawing.Color.Gray;
-            this.label15.Location = new System.Drawing.Point(128, 0);
+            this.label15.Location = new System.Drawing.Point(125, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(119, 15);
+            this.label15.Size = new System.Drawing.Size(116, 15);
             this.label15.TabIndex = 20;
             this.label15.Text = "File Name:";
             // 
@@ -687,7 +694,7 @@
             this.RemoveSavedFile.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RemoveSavedFile.Location = new System.Drawing.Point(378, 32);
+            this.RemoveSavedFile.Location = new System.Drawing.Point(369, 33);
             this.RemoveSavedFile.Name = "RemoveSavedFile";
             this.RemoveSavedFile.Size = new System.Drawing.Size(119, 24);
             this.RemoveSavedFile.TabIndex = 26;
@@ -700,9 +707,9 @@
             this.Import.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Import.Location = new System.Drawing.Point(378, 3);
+            this.Import.Location = new System.Drawing.Point(369, 3);
             this.Import.Name = "Import";
-            this.Import.Size = new System.Drawing.Size(119, 23);
+            this.Import.Size = new System.Drawing.Size(119, 24);
             this.Import.TabIndex = 25;
             this.Import.Text = "Import";
             this.Import.UseVisualStyleBackColor = true;
@@ -718,20 +725,34 @@
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "Remember";
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.AutoSize = true;
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.SavesPanel, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(501, 44);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(491, 372);
+            this.tableLayoutPanel3.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.ClientSize = new System.Drawing.Size(1016, 587);
-            this.Controls.Add(this.tableLayoutPanel2);
+            this.ClientSize = new System.Drawing.Size(1016, 594);
+            this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.IntegratedCheck);
-            this.Controls.Add(this.SavesPanel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.DetectionZone);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "C# Latency Meter";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -757,6 +778,8 @@
             this.SavesPanel.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -768,11 +791,7 @@
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label SysLat;
-        private System.Windows.Forms.Label MouseLat;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label MinSysLat;
-        private System.Windows.Forms.Label AvgSysLat;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button ResetDataButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -783,18 +802,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label MinMouseLat;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label AvgMouseLat;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label MinPCLat;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label PCLat;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label AvgPCLat;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TableLayoutPanel SavesPanel;
         private System.Windows.Forms.Label label8;
@@ -819,6 +833,16 @@
         private System.Windows.Forms.ComboBox PortCB;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolTip toolTip1;
+        public System.Windows.Forms.Label SysLat;
+        public System.Windows.Forms.Label MouseLat;
+        public System.Windows.Forms.Label MinSysLat;
+        public System.Windows.Forms.Label AvgSysLat;
+        public System.Windows.Forms.Label MinMouseLat;
+        public System.Windows.Forms.Label AvgMouseLat;
+        public System.Windows.Forms.Label MinPCLat;
+        public System.Windows.Forms.Label PCLat;
+        public System.Windows.Forms.Label AvgPCLat;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }
 
