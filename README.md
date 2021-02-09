@@ -34,9 +34,9 @@ I would recommend putting a **500Ω resistor in series with the light sensor**. 
 
 ![Arduino UNO Schema](https://raw.githubusercontent.com/AndyFilter/Latency-Meter-CSharp/main/Media/LightsensorLatencyMeter.png)
 
-3. Connect the Arduino to the PC via USB.
-4. Upload the [***Code***](https://github.com/AndyFilter/Latency-Meter-CSharp/blob/main/Arduino/SystemLatencyMeter/SystemLatencyMeter.ino) onto the board.
-5. Download the [***latest release***](https://github.com/AndyFilter/Latency-Meter-CSharp/releases/latest) of the program.
+ 3. Connect the Arduino to the PC via USB.
+ 4. Upload the [***Code***](https://github.com/AndyFilter/Latency-Meter-CSharp/blob/main/Arduino/SystemLatencyMeter/SystemLatencyMeter.ino) onto the board.
+ 5. Download the [***latest release***](https://github.com/AndyFilter/Latency-Meter-CSharp/releases/latest) of the program.
 
 # How to use
 
