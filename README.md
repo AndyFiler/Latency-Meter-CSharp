@@ -1,13 +1,14 @@
 
-# QuizizzSupport
-[![GitHub top language](https://img.shields.io/github/languages/top/AndyFilter/Latency-Meter-CSharp)](https://en.wikipedia.org/wiki/C_Sharp_(programming_language))  [![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg?)](https://en.wikipedia.org/wiki/Microsoft_Windows) ![GitHub all releases](https://img.shields.io/github/downloads/AndyFilter/Latency-Meter-CSharp/total) [![GitHub](https://img.shields.io/github/license/AndyFilter/Latency-Meter-CSharp)](https://github.com/AndyFilter/Latency-Meter-CSharp/blob/main/LICENSE) 
+# NOTE! This program is **deprecated**. Please use the [**Refreshed Version**](https://github.com/AndyFilter/LatencyMeterRefreshed)
 
+# LatencyMeterC#
+[![GitHub top language](https://img.shields.io/github/languages/top/AndyFilter/Latency-Meter-CSharp)](https://en.wikipedia.org/wiki/C_Sharp_(programming_language))  [![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg?)](https://en.wikipedia.org/wiki/Microsoft_Windows) ![GitHub all releases](https://img.shields.io/github/downloads/AndyFilter/Latency-Meter-CSharp/total) [![GitHub](https://img.shields.io/github/license/AndyFilter/Latency-Meter-CSharp)](https://github.com/AndyFilter/Latency-Meter-CSharp/blob/main/LICENSE) 
 
 
 This program lets you **measure latency of your system** given that you have Arduino. ***Now in C#!***
 
 # Measure performance and latency of your PC
-Are you Interested in measuring the latency of your system, but can't afford **750$ monitor**? Well in that case you are not alone! This program let's you even measure the latency of single component like **mouse latency, system latency,** or just overall latency.
+Are you Interested in measuring the latency of your system, but can't afford **750$ monitor**? Well in that case you are not alone! This program lets you even measure the latency of single component like **mouse latency, system latency,** or just overall latency.
 
 
 # What will you need
@@ -54,7 +55,7 @@ If you have any kind of question or issue to report. DM me through Discord: **Is
 
 # Edits & Forks
 Feel free to fork the project. Tweak, fix and add to the code. I tried to add as many **useful comments** to the code as it's possible, so code should be **easy to read**.
-I'll be fixing and adding to the code myself, when I'll see a need to.
+I'll be fixing and adding to the code myself when I'll see a need to.
 
 **I'll be writing most of the code for the program from the ground up**, because it was not clean and transparent enough.
 
